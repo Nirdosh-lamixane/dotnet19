@@ -1,0 +1,23 @@
+@model StudentManagement.Models.Student
+
+<h2>Welcome, @Model.Name</h2>
+<p>Roll No: @Model.StdID</p>
+<p>Current Date and Time: @DateTime.Now.ToString()</p>
+<h3>Multiplication Table of @(Model.StdID + 1)</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Number</th>
+            <th>Result</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 1; i <= 10; i++)
+        {
+            <tr>
+                <td>@i</td>
+                <td>@(i * (Model.StdID + 1))</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,27 @@
+@model StudentManagement.Models.Student
+
+<h2>Create Student</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="StdID"></label>
+        <input asp-for="StdID" class="form-control" />
+        <span asp-validation-for="StdID"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Address"></label>
+        <input asp-for="Address" class="form-control" />
+        <span asp-validation-for="Address"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Faculty"></label>
+        <input asp-for="Faculty" class="form-control" />
+        <span asp-validation-for="Faculty"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
